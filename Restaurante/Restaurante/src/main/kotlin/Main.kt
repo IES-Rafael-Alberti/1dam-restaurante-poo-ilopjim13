@@ -9,33 +9,33 @@ fun main() {
     // Inicialización del sistema de gestión de restaurante
     val sistema = SistemaGestionRestaurante(mesas)
 
-    // Creación de platos
-    val plato1 = Plato("Hamburguesa", 9.99, 8, mutableListOf("carne", "huevo", "queso", "pan", "tomate"))
-    val plato2 = Plato("Ensalada", 7.99, 5, mutableListOf("lechuga", "tomate", "zanahoria", "maíz"))
-    val plato3 = Plato("Tortilla", 5.99, 10, mutableListOf("huevo", "patata"))
-    val plato4 = Plato("Serranito", 6.00, 4, mutableListOf("carne", "pimiento", "pan", "jamón serrano"))
-    val plato5 = Plato("Spagetti carbonara", 6.00, 12, mutableListOf("huevo", "pasta", "bacon", "nata"))
-    val plato6 = Plato("Rissotto setas", 6.00, 12, mutableListOf("arroz", "setas", "gambas", "nata"))
+  // Creación de platos
+  val plato1 = Plato("Hamburguesa", 9.99, 8, mutableListOf("carne", "huevo", "queso", "pan", "tomate"))
+  val plato2 = Plato("Ensalada", 7.99, 5, mutableListOf("lechuga", "tomate", "zanahoria", "maíz"))
+  val plato3 = Plato("Tortilla", 5.99, 10, mutableListOf("huevo", "patata"))
+  val plato4 = Plato("Serranito", 6.00, 4, mutableListOf("carne", "pimiento", "pan", "jamón serrano"))
+  val plato5 = Plato("Spagetti carbonara", 6.00, 12, mutableListOf("huevo", "pasta", "bacon", "nata"))
+  val plato6 = Plato("Rissotto setas", 6.00, 12, mutableListOf("arroz", "setas", "gambas", "nata"))
 
-    // Agregar ingredientes
-    plato1.agregarIngrediente("salsa")
-    plato2.agregarIngrediente("atún")
+  // Agregar ingredientes
+  plato1.agregarIngrediente("salsa")
+  plato2.agregarIngrediente("atún")
 
-    //Simular el registro de comensales a una mesa
+  //Simular el registro de comensales a una mesa
     mesas[0].ocuparMesa() // Ocupar mesa 1
 
-    // Creación de pedidos
-    val pedido1 = Pedido()
-    pedido1.agregarPlato(plato1)
-    pedido1.agregarPlato(plato2)
-    pedido1.agregarPlato(plato3)
-    pedido1.agregarPlato(plato4)
+  // Creación de pedidos
+  val pedido1 = Pedido()
+  pedido1.agregarPlato(plato1)
+  pedido1.agregarPlato(plato2)
+  pedido1.agregarPlato(plato3)
+  pedido1.agregarPlato(plato4)
 
-    println("***** Pedido ${pedido1.numero} *****")
-    println(pedido1)
+  println("***** Pedido ${pedido1.numero} *****")
+  println(pedido1)
 
-    // Simulación del proceso de los pedidos
-    sistema.realizarPedido(1, pedido1)
+  // Simulación del proceso de los pedidos
+  sistema.realizarPedido(1, pedido1)
 
     println("***** Mesa ${mesas[0].numero} *****")
     println(mesas[0])
